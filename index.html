@@ -11,7 +11,7 @@
 <body>
     <header>
     <div class="nav-container">
-        <div class="logo">شعاري</div>
+        <div class="logo">جمعية واحة الخير</div>
         
        <nav>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -70,16 +70,10 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
-   <script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
-
-    hamburger.addEventListener("click", function () {
-        navMenu.classList.toggle("show");
-    });
-});
-
-</script>
+     <script>
+        function toggleMenu() {
+            document.querySelector(".nav-menu").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
