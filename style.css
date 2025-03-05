@@ -85,7 +85,9 @@ nav ul li a:hover {
   .hamburger {
     display: block;
   }
-
+  h1, h2, h3, p {
+        color: white !important; /* تغيير اللون إلى الأبيض */
+    }
   nav ul {
     flex-direction: column;
     position: absolute;
