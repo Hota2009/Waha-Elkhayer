@@ -10,21 +10,22 @@
 </head>
 <body>
     <header>
-        <div class="nav-container">
-            <div class="logo">واحة الخير</div>
-            <button class="hamburger" onclick="toggleMenu()">
+    <div class="nav-container">
+        <div class="logo">واحة الخير</div>
+        <button class="hamburger" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
-            <nav id="nav-links">
-                <ul>
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#services">الخدمات</a></li>
-                    <li><a href="#gallery">معرض الصور</a></li>
-                    <li><a href="#extra">معلومات إضافية</a></li>
-                    <li><a href="#contact">تواصل معنا</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </button>
+        <nav id="nav-links">
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#gallery">معرض الصور</a></li>
+                <li><a href="#extra">معلومات إضافية</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <section id="home" class="hero section">
         <h1>جمعية واحة الخير لعلاج مرضى السرطان</h1>
@@ -71,11 +72,11 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
-    <script>
-        function toggleMenu() {
-        var navLinks = document.getElementById("nav-links");
-        navLinks.classList.toggle("show");
+   <script>
+    function toggleMenu() {
+        var nav = document.getElementById("nav-links").querySelector("ul");
+        nav.classList.toggle("show");
     }
-    </script>
+</script>
 </body>
 </html>
