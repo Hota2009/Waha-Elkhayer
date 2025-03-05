@@ -73,10 +73,15 @@
         </div>
     </footer>
    <script>
-    function toggleMenu() {
-        var nav = document.getElementById("nav-links").querySelector("ul");
-        nav.classList.toggle("show");
-    }
+   document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
+
+    hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+    });
+});
+
 </script>
 </body>
 </html>
