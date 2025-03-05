@@ -1,3 +1,4 @@
+/* تحسين الخطوط وتنسيق الصفحة */
 body {
   font-family: 'Tajawal', sans-serif;
   margin: 0;
@@ -6,6 +7,8 @@ body {
   background-color: #f0f0f0;
   color: #333;
 }
+
+/* تحسين الهيدر */
 header {
   background: linear-gradient(90deg, #00796b, #004d40);
   color: white;
@@ -41,74 +44,84 @@ header {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
+
 .hamburger:hover {
   color: #ffcc80;
 }
 
+/* تحسين التنقل */
 nav {
   position: relative;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
 }
+
 nav ul li {
   margin: 0 15px;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
   padding: 8px 12px;
   border-radius: 5px;
+  transition: background 0.3s;
 }
+
 nav ul li a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* ستايل الموبايل */
+/* تحسين القائمة في الجوال */
 @media (max-width: 768px) {
   .hamburger {
-      display: block;
+    display: block;
   }
+
   nav ul {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background: #00796b;
-      width: 100%;
-      text-align: right;
-      padding: 10px 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: max-height 0.5s ease-in-out;
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #00796b;
+    width: 100%;
+    text-align: right;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: max-height 0.5s ease-in-out, opacity 0.3s;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
   }
+
   nav ul.show {
-      max-height: 500px;
-      opacity: 1;
+    max-height: 500px;
+    opacity: 1;
   }
+
   nav ul li {
-      margin: 10px 0;
-      text-align: center;
+    margin: 10px 0;
+    text-align: center;
   }
 }
 
-/* تحسين قسم البطل ليكون متجاوبًا */
+/* تحسين قسم البطل */
 .hero {
   text-align: center;
   padding: 50px;
   background: url('hero.jpg') no-repeat center center/cover;
-  color: #00796b;
+  color: #fff;
   font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* تحسين الأزرار */
@@ -119,15 +132,16 @@ nav ul li a:hover {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: background 0.3s, transform 0.2s;
   display: inline-block;
 }
 
 .btn:hover {
   background-color: #e64a19;
+  transform: scale(1.05);
 }
 
-/* جعل الأقسام مرنة ومتجاوبة */
+/* تحسين الأقسام */
 .section {
   padding: 40px;
   margin: 20px;
@@ -137,7 +151,7 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* تحسين تنسيق صناديق الخدمات */
+/* تحسين صناديق الخدمات */
 .service-boxes {
   display: flex;
   justify-content: center;
@@ -149,18 +163,19 @@ nav ul li a:hover {
   background: white;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 30%;
+  width: calc(33.333% - 20px);
   text-align: center;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   border: 2px solid #00796b;
 }
 
 .service-box:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* تحسين تنسيق المعرض */
+/* تحسين المعرض */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -174,6 +189,11 @@ nav ul li a:hover {
   height: 150px;
   border-radius: 8px;
   border: 2px solid #004d40;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
 }
 
 /* تحسين قسم التبرعات */
@@ -211,61 +231,63 @@ footer {
   margin: 0 10px;
   text-decoration: none;
   font-size: 1.2em;
-  transition: 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 .social-icons a:hover {
   color: #ffcc80;
+  transform: scale(1.2);
 }
 
+/* تحسين التوافق مع الأجهزة المختلفة */
 @media (max-width: 992px) {
   .service-box {
-      width: 45%;
+    width: 45%;
   }
 }
 
 @media (max-width: 768px) {
   .nav-container {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   nav ul {
-      flex-direction: column;
-      width: 100%;
+    flex-direction: column;
+    width: 100%;
   }
 
   nav ul li {
-      margin: 5px 0;
+    margin: 5px 0;
   }
 
   .hero {
-      padding: 30px;
-      font-size: 1.2em;
+    padding: 30px;
+    font-size: 1.2em;
   }
 
   .service-box {
-      width: 100%;
+    width: 100%;
   }
 
   .gallery img {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-      font-size: 1em;
-      padding: 20px;
+    font-size: 1em;
+    padding: 20px;
   }
 
   .btn {
-      padding: 10px 20px;
-      font-size: 0.9em;
+    padding: 10px 20px;
+    font-size: 0.9em;
   }
 
   .section {
-      padding: 20px;
+    padding: 20px;
   }
 }
