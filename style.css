@@ -1,0 +1,263 @@
+body {
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background-color: #f0f0f0;
+  color: #333;
+}
+header {
+  background: linear-gradient(90deg, #00796b, #004d40);
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* زر الهامبرجر */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: 0.3s;
+}
+.hamburger:hover {
+  color: #ffcc80;
+}
+
+nav {
+  position: relative;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ستايل الموبايل */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+  nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #00796b;
+      width: 100%;
+      text-align: right;
+      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: max-height 0.5s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+  }
+  nav ul.show {
+      display: flex;
+      max-height: 500px;
+  }
+  nav ul li {
+      margin: 10px 0;
+      text-align: center;
+  }
+}
+/* تحسين قسم البطل ليكون متجاوبًا */
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: url('hero.jpg') no-repeat center center/cover;
+  color: #00796b;
+  font-size: 1.5em;
+}
+
+/* تحسين الأزرار */
+.btn {
+  background-color: #ff5722;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #e64a19;
+}
+
+/* جعل الأقسام مرنة ومتجاوبة */
+.section {
+  padding: 40px;
+  margin: 20px;
+  background: white;
+  border: 2px solid #00796b;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* تحسين تنسيق صناديق الخدمات */
+.service-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 30%;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.3s;
+  border: 2px solid #00796b;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+/* تحسين تنسيق المعرض */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  border: 2px solid #004d40;
+}
+
+/* تحسين قسم التبرعات */
+.donation-section {
+  text-align: center;
+  background: #ffcc80;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 8px;
+  border: 2px solid #ff9800;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.donation-section h2 {
+  color: #e65100;
+}
+
+.donation-section .btn {
+  background-color: #e65100;
+}
+
+/* تحسين الفوتر */
+footer {
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+
+/* تحسين الأيقونات الاجتماعية */
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffcc80;
+}
+
+/* **جعل التصميم متجاوبًا باستخدام الـ Media Queries** */
+@media (max-width: 992px) {
+  .service-box {
+      width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  nav ul {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  nav ul li {
+      margin: 5px 0;
+  }
+
+  .hero {
+      padding: 30px;
+      font-size: 1.2em;
+  }
+
+  .service-box {
+      width: 100%;
+  }
+
+  .gallery img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+      font-size: 1em;
+      padding: 20px;
+  }
+
+  .btn {
+      padding: 10px 20px;
+      font-size: 0.9em;
+  }
+
+  .section {
+      padding: 20px;
+  }
+}
